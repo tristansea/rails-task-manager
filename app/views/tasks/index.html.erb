@@ -1,0 +1,12 @@
+<h1>Tasks#index</h1>
+<p>Find me in app/views/tasks/index.html.erb</p>
+
+<%= @tasks %>
+<ul>
+  <% @tasks.each do |task| %>
+  <li><%= task.title %> <%= link_to "show", task_path(task) %> | <%= link_to "edit", edit_path(task) %></li> <%= link_to "delete", delete_path(task), method: :delete %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to "New Task", tasks_new_path %> </p>
+
